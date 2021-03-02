@@ -181,6 +181,7 @@ def run_script(
         output=_output,
         env=env,
         resources=resources,
+        volume_mounts=volume_mounts,
     )
     proto_repr.add_deps_to_step(step_name)
     return rets
@@ -330,6 +331,7 @@ def run_container(
         output=_output,
         env=env,
         resources=resources,
+        volume_mounts=volume_mounts,
     )
     proto_repr.add_deps_to_step(step_name)
     return rets
