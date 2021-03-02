@@ -58,16 +58,6 @@ message VolumeMount {
   string path = 2;
 }
 
-// This is only a placeholder and currently only emptyDir volume source is supported.
-message VolumeSource {
-  string name = 1;
-}
-
-message Volume {
-  string name = 1;
-  VolumeSource source = 2;
-}
-
 message ContainerSpec {
     string image = 1;
     repeated string command = 2;
@@ -104,7 +94,6 @@ message Step {
   repeated string dependencies = 9;
   string when = 10;
   map<string, google.protobuf.Any> attrs = 11;  // attributes for step
-  repeated Volume volumes = 12;
 }
 
 message ConcurrentSteps {
